@@ -39,11 +39,23 @@ router.get('/external-links', async (req, res) => {
   try {
     const jsonData = await readJSONFile();
     const linksByTweetId = {};
+    
+    // Regular expression to match URLs in a tweet text
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+
     jsonData.forEach(tweet => {
       const tweetId = tweet.id_str;
-      const links = tweet.entities.urls.map(url => url.expanded_url);
-      linksByTweetId[tweetId] = links;
+      const tweetText = tweet.text;
+
+      // Extract links using the regular expression
+      const links = tweetText.match(urlRegex);
+
+      if (links) {
+        // Group links based on tweet ids
+        linksByTweetId[tweetId] = links;
+      }
     });
+
     res.json(linksByTweetId);
   } catch (error) {
     res.status(500).json({ error: 'Internal Server Error' });
