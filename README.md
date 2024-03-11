@@ -1,5 +1,5 @@
 # JavaScript Twitter Rest API
-
+This is a Node.js program built with the Express framework to create a REST API for managing Twitter archive data which is stored in a json format.
 
 ## To Run
 
