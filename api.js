@@ -30,7 +30,7 @@ router.get('/tweets', async (req, res) => {
     }));
     res.json(tweets);
   } catch (error) {
-    res.status(500).json({ error: 'Internal Server Error' });
+    res.status(500).json({ error: 'Error' });
   }
 });
 
@@ -58,7 +58,7 @@ router.get('/external-links', async (req, res) => {
 
     res.json(linksByTweetId);
   } catch (error) {
-    res.status(500).json({ error: 'Internal Server Error' });
+    res.status(500).json({ error: 'Error' });
   }
 });
 
@@ -79,7 +79,7 @@ router.get('/tweet/:tweetId', async (req, res) => {
       res.status(404).json({ error: 'Tweet not found' });
     }
   } catch (error) {
-    res.status(500).json({ error: 'Internal Server Error' });
+    res.status(500).json({ error: 'Error' });
   }
 });
 
@@ -101,7 +101,7 @@ router.get('/user/:screenName', async (req, res) => {
       res.status(404).json({ error: 'User not found' });
     }
   } catch (error) {
-    res.status(500).json({ error: 'Internal Server Error' });
+    res.status(500).json({ error: 'Error' });
   }
 });
 
