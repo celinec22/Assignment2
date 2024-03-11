@@ -1,4 +1,4 @@
-// Get all tweets
+//import
 const express = require('express');
 const axios = require('axios');
 
@@ -83,7 +83,7 @@ router.get('/tweet/:tweetId', async (req, res) => {
   }
 });
 
-// Get detailed profile information about a given user by screen name
+// Get information about a given user by screen name
 router.get('/user/:screenName', async (req, res) => {
   try {
     const jsonData = await readJSONFile();
