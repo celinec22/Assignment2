@@ -6,6 +6,8 @@ const PORT = process.env.PORT || 4000;
 
 app.use('/api', apiRouter);
 
+
+// Start the server and listen on the specified port
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
