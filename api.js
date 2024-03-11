@@ -6,7 +6,7 @@ const router = express.Router();
 
 
 
-// Read JSON file function (use axios to fetch JSON from the URL)
+// Read JSON file function (using axios to fetch JSON from the URL)
 const readJSONFile = async () => {
   try {
     const response = await axios.get('https://foyzulhassan.github.io/files/favs.json');
@@ -18,7 +18,7 @@ const readJSONFile = async () => {
 };
 
 
-
+//get all tweets with date created at, description, and, ID
 router.get('/tweets', async (req, res) => {
   try {
     const jsonData = await readJSONFile();
