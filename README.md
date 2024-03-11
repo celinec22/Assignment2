@@ -16,7 +16,7 @@
 3. Copy and paste link http://localhost:4000
 4. To Test:
 - http://localhost:4000/api/tweets
-- http://localhost:4000/api/externallinks
+- http://localhost:4000/api/external-links
 - http://localhost:4000/api/tweet/<tweet_id>
 - http://localhost:4000/api/user/<screen_name>
     
